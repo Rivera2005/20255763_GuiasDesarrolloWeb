@@ -29,7 +29,8 @@
 
         <section id="introduccion">
             <h2>Guía de ejercicios</h2>
-            <p>Ejercicios realizados durante la primera guía de Web I, incluyendo el uso de estilos CSS y el reto de inteligencia artificial.</p>
+            <p>Ejercicios realizados durante la primera guía de Web I, incluyendo el uso de estilos CSS y el reto de
+                inteligencia artificial.</p>
         </section>
 
         <section id="ejercicios">
@@ -115,8 +116,7 @@
                 </div>
 
                 <div class="video-contenedor">
-                    <iframe src="https://www.youtube.com/embed/3QA7u-70csQ"
-                        title="Explicación del Reto AI"
+                    <iframe src="https://www.youtube.com/embed/3QA7u-70csQ" title="Explicación del Reto AI"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
@@ -140,44 +140,80 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Etiquetas HTML</td>
-                                <td><strong>Etiquetas semánticas:</strong> permiten organizar el contenido de la página mediante elementos como header, nav, main, section, article y footer.</td>
+                                <td>Estructura del documento: &lt;!DOCTYPE html&gt;, &lt;html lang="es-SV"&gt;,
+                                    &lt;head&gt;, &lt;meta charset&gt;, &lt;meta viewport&gt;, &lt;title&gt; y
+                                    &lt;body&gt;.</td>
+                                <td>Posicionamiento (position: fixed, relative y absolute). Se utiliza para dejar el
+                                    header fijo en la parte superior, colocar etiquetas como &ldquo;Nuevo&rdquo; o
+                                    &ldquo;Favorito&rdquo; sobre las imágenes y posicionar el contenido del hero encima
+                                    de la imagen de fondo.</td>
                             </tr>
                             <tr>
-                                <td>Enlaces</td>
-                                <td><strong>Enlaces internos:</strong> permiten desplazarse directamente a diferentes secciones de la misma página mediante identificadores.</td>
+                                <td>Etiquetas semánticas: header, nav, main, section, article y footer.</td>
+                                <td>Flexbox (display: flex, align-items, justify-content, gap, flex-direction, flex-wrap
+                                    y flex: 1). Sirve para acomodar los elementos del header, distribuir los botones del
+                                    hero, ordenar las tarjetas y organizar el contenido del footer.</td>
                             </tr>
                             <tr>
-                                <td>Listas</td>
-                                <td><strong>list-style: none:</strong> elimina los marcadores predeterminados de los elementos de una lista.</td>
+                                <td>Jerarquía de texto: h1, h2, h3, h4, p y span.</td>
+                                <td>CSS Grid (display: grid y grid-template-columns). Se usa para crear la cuadrícula de
+                                    sabores, organizar las tarjetas de negocio, formar el mosaico de fotos de redes
+                                    sociales y distribuir las columnas del footer.</td>
                             </tr>
                             <tr>
-                                <td>CSS básico</td>
-                                <td><strong>Flexbox:</strong> permite organizar y alinear elementos dentro de un contenedor.</td>
+                                <td>Listas: ul y li, utilizadas principalmente para el menú de navegación y algunas
+                                    partes del footer.</td>
+                                <td>Media queries (@media). Permiten que la página se adapte a diferentes tamaños de
+                                    pantalla. Por ejemplo, el menú cambia a formato hamburguesa, las cuadrículas tienen
+                                    menos columnas y se ajustan los tamaños para tablet y celular.</td>
                             </tr>
                             <tr>
-                                <td>CSS básico</td>
-                                <td><strong>Grid:</strong> permite organizar los elementos en filas y columnas.</td>
+                                <td>Enlaces e imágenes: &lt;a href&gt;, &lt;img src&gt; y alt.</td>
+                                <td>Unidades relativas y clamp() (rem, %, vh y vw). Hacen que los tamaños y espacios se
+                                    adapten de forma más fluida al tamaño de la pantalla, por ejemplo en el título
+                                    principal y en la altura del hero.</td>
                             </tr>
                             <tr>
-                                <td>Colores y fondos</td>
-                                <td><strong>background-color:</strong> permite establecer el color de fondo de los diferentes elementos.</td>
+                                <td>Atributos globales: id, class, lang, target y rel.</td>
+                                <td>Variables CSS o custom properties (:root). Permiten guardar valores como colores,
+                                    radios y sombras para reutilizarlos en diferentes partes del CSS sin tener que
+                                    escribirlos nuevamente y facilitando cambios en el diseño.</td>
                             </tr>
                             <tr>
-                                <td>Modelo de caja</td>
-                                <td><strong>box-sizing: border-box:</strong> hace que el padding y el borde se incluyan dentro del ancho y alto establecidos.</td>
+                                <td>Selectores de CSS: selector de tipo, clase, descendiente, combinador &gt;, además de
+                                    :hover, :focus-visible y :after.</td>
+                                <td>backdrop-filter: blur(). Es un efecto visual que genera una especie de fondo
+                                    esmerilado en el header fijo, haciendo que el contenido que queda detrás se vea
+                                    desenfocado.</td>
                             </tr>
                             <tr>
-                                <td>Tablas HTML</td>
-                                <td><strong>overflow-x: auto:</strong> permite desplazar horizontalmente el contenido cuando la tabla supera el espacio disponible.</td>
+                                <td>Cascada, herencia y especificidad: reglas que se sobrescriben, herencia de estilos.
+                                </td>
+                                <td>object-fit: cover y aspect-ratio. Se utilizan para que las imágenes ocupen
+                                    correctamente el espacio disponible sin deformarse, por ejemplo en imágenes
+                                    circulares o en contenedores rectangulares.</td>
                             </tr>
                             <tr>
-                                <td>HTML</td>
-                                <td><strong>iframe:</strong> permite incrustar contenido externo, como un video de YouTube, dentro de la página.</td>
+                                <td>Propiedades fundamentales: color, background, font-family, font-size, font-weight,
+                                    text-align, line-height y opacity.</td>
+                                <td>scroll-behavior: smooth. Hace que los enlaces internos, como #productos o #tiendas,
+                                    lleven a la sección correspondiente mediante un desplazamiento suave en lugar de
+                                    saltar directamente.</td>
                             </tr>
                             <tr>
-                                <td>CSS</td>
-                                <td><strong>:hover:</strong> permite modificar el estilo de un elemento cuando el cursor se encuentra sobre él.</td>
+                                <td>Modelo de caja: box-sizing, margin, padding, border, border-radius, width, height y
+                                    box-shadow.</td>
+                                <td>Atributos ARIA: aria-expanded, aria-haspopup, aria-controls, aria-label y
+                                    role="img". Se utilizan para mejorar la accesibilidad, principalmente para que los
+                                    lectores de pantalla puedan entender el estado de los menús y elementos que no
+                                    tienen texto visible.</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>JavaScript y DOM (querySelector, addEventListener, classList.toggle, foreach y
+                                    setAttribute). Se encargan de la parte interactiva del menú: abrir y cerrar el menú
+                                    hamburguesa, mostrar los submenús en pantallas táctiles y cerrar el menú cuando se
+                                    selecciona un enlace.</td>
                             </tr>
                         </tbody>
                     </table>
