@@ -242,8 +242,28 @@ section {
     flex: 1;
 }
 
+.video-reto {
+    margin-top: 60px;
+}
+
+.video-contenedor {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd6c9;
+}
+
+.video-contenedor iframe {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
 #correspondencia {
-    background-color: #eeeae2;
+    margin-top: 70px;
+    padding: 60px 0;
 }
 
 .tabla-contenedor {
