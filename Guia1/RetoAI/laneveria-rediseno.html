@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Nevería — Rediseño de Inicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF7EC;
+    --cream-2:#FFEFDC;
+    --ink:#241934;
+    --berry:#E8386F;
+    --berry-dark:#C22459;
+    --berry-light:#FFE3EC;
+    --mango:#FFA630;
+    --mango-dark:#E88A0E;
+    --mint:#3FBF9F;
+    --mint-dark:#2C9C81;
+    --blueberry:#2E1F4E;
+    --blueberry-2:#231640;
+    --max:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    line-height:1.05;
+    margin:0;
+  }
+  p{line-height:1.6;margin:0;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:3px solid var(--mango);outline-offset:3px;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,247,236,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(36,25,52,0.08);
+  }
+  .nav{
+    max-width:var(--max);margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.35rem;color:var(--berry-dark);}
+  .logo img{height:40px;width:auto;}
+  .navlinks{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:600;font-size:0.97rem;}
+  .navlinks a{padding:6px 2px;border-bottom:2px solid transparent;transition:border-color .15s ease, color .15s ease;}
+  .navlinks a:hover{border-color:var(--berry);color:var(--berry-dark);}
+  .cta-btn{
+    background:var(--berry);color:#fff;padding:11px 22px;border-radius:999px;
+    font-weight:700;font-size:0.95rem;white-space:nowrap;
+    box-shadow:0 4px 0 var(--berry-dark);
+    transition:transform .12s ease;
+  }
+  .cta-btn:hover{transform:translateY(-2px);}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--ink);cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;background:var(--blueberry);color:#fff;
+    padding:76px 0 130px;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(420px 420px at 8% 18%, rgba(232,56,112,0.35), transparent 70%),
+      radial-gradient(500px 500px at 92% 8%, rgba(255,166,48,0.25), transparent 70%),
+      radial-gradient(600px 600px at 85% 90%, rgba(63,191,159,0.20), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;max-width:var(--max);margin:0 auto;padding:0 28px;
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;
+  }
+  .hero-copy h1{font-size:clamp(2.3rem,4.6vw,3.6rem);color:#fff;}
+  .hero-copy h1 span{color:var(--mango);}
+  .hero-copy p{margin-top:18px;font-size:1.15rem;color:#E9E1F5;max-width:46ch;}
+  .hero-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--mango);color:var(--blueberry-2);padding:14px 26px;border-radius:999px;
+    font-weight:700;box-shadow:0 5px 0 var(--mango-dark);transition:transform .12s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-ghost{
+    border:2px solid rgba(255,255,255,0.55);color:#fff;padding:12px 24px;border-radius:999px;
+    font-weight:700;transition:background .15s ease,border-color .15s ease;
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,0.12);border-color:#fff;}
+
+  .scoop-cluster{position:relative;height:380px;}
+  .scoop{
+    position:absolute;border-radius:50%;overflow:hidden;
+    border:6px solid rgba(255,255,255,0.9);
+    box-shadow:0 14px 30px rgba(0,0,0,0.35);
+    opacity:0;transform:translateY(18px) scale(0.9);
+    animation:pop .7s cubic-bezier(.2,.9,.25,1) forwards;
+  }
+  .scoop img{width:100%;height:100%;object-fit:cover;}
+  .scoop.s1{width:190px;height:190px;top:0;left:10%;animation-delay:.05s;}
+  .scoop.s2{width:150px;height:150px;top:40px;right:6%;animation-delay:.2s;}
+  .scoop.s3{width:210px;height:210px;bottom:10px;left:26%;animation-delay:.35s;}
+  .scoop.s4{width:130px;height:130px;bottom:0;right:20%;animation-delay:.5s;}
+  @keyframes pop{to{opacity:1;transform:translateY(0) scale(1);}}
+  @media (prefers-reduced-motion:reduce){
+    .scoop{animation:none;opacity:1;transform:none;}
+  }
+
+  .scallop{position:absolute;left:0;right:0;bottom:-1px;line-height:0;}
+  .scallop svg{width:100%;height:60px;display:block;}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee-band{background:var(--mango);overflow:hidden;padding:14px 0;}
+  .marquee-track{display:flex;width:max-content;animation:scroll 26s linear infinite;}
+  @media (prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .marquee-track span{
+    font-family:'Baloo 2',sans-serif;font-weight:700;font-size:1.15rem;color:var(--blueberry-2);
+    padding:0 26px;white-space:nowrap;
+  }
+  .marquee-track span::after{content:"•";margin-left:26px;color:rgba(46,31,78,0.4);}
+
+  /* ---------- SECTION HEADINGS ---------- */
+  .section{padding:86px 0;}
+  .section-head{max-width:56ch;margin-bottom:44px;}
+  .section-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);color:var(--berry-dark);}
+  .section-head p{margin-top:12px;font-size:1.05rem;color:#4a3f57;}
+  .section-head.on-dark h2{color:#fff;}
+  .section-head.on-dark p{color:#D9CFEC;}
+
+  /* ---------- CATEGORY GRID ---------- */
+  .cat-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:34px 26px;
+  }
+  .cat-tile{text-align:center;}
+  .cat-icon{
+    width:108px;height:108px;border-radius:50%;margin:0 auto 14px;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .18s ease;
+  }
+  .cat-tile:hover .cat-icon{transform:translateY(-6px) rotate(-3deg);}
+  .cat-tile h3{font-size:1.05rem;color:var(--ink);}
+  .cat-tile span{display:block;font-size:0.85rem;color:#77697f;margin-top:4px;}
+  .cat-icon svg{width:52px;height:52px;}
+
+  /* ---------- PROMO BANNER ---------- */
+  .promo{
+    background:var(--mint);position:relative;overflow:hidden;
+    border-radius:32px;padding:52px 44px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  }
+  .promo::after{
+    content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;
+    background:rgba(255,255,255,0.18);
+  }
+  .promo h2{color:#fff;font-size:clamp(1.6rem,3vw,2.1rem);max-width:16ch;position:relative;}
+  .promo p{color:#EAFBF6;margin-top:10px;max-width:38ch;position:relative;}
+  .promo .btn-primary{background:#fff;color:var(--mint-dark);box-shadow:0 5px 0 rgba(0,0,0,0.12);position:relative;}
+
+  /* ---------- GROW WITH US ---------- */
+  .grow-section{background:var(--berry-light);}
+  .grow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+  .grow-card{background:#fff;padding:0 0 26px;overflow:hidden;box-shadow:0 10px 24px rgba(232,56,112,0.10);}
+  .grow-card:nth-child(1){border-radius:36px 36px 36px 8px;}
+  .grow-card:nth-child(2){border-radius:8px 36px 36px 36px;}
+  .grow-card:nth-child(3){border-radius:36px 8px 36px 36px;}
+  .grow-card .photo{height:190px;overflow:hidden;}
+  .grow-card .photo img{width:100%;height:100%;object-fit:cover;}
+  .grow-card .body{padding:24px 26px 0;}
+  .grow-card h3{font-size:1.25rem;color:var(--berry-dark);}
+  .grow-card p{margin-top:10px;color:#544862;font-size:0.97rem;}
+  .grow-card .link{
+    display:inline-block;margin-top:16px;font-weight:700;color:var(--berry);
+    border-bottom:2px solid var(--berry);padding-bottom:2px;
+  }
+
+  /* ---------- SOCIAL ---------- */
+  .social-section{background:var(--blueberry-2);color:#fff;}
+  .social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .social-card{
+    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
+    border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .social-card:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);}
+  .social-card svg{width:34px;height:34px;}
+  .social-card h3{font-size:1.1rem;}
+  .social-card p{color:#C9BEE0;font-size:0.92rem;}
+  .social-card .go{margin-top:auto;font-weight:700;color:var(--mango);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--blueberry);color:#D9CFEC;padding:56px 0 26px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:34px;}
+  .foot-brand .logo{color:#fff;}
+  .foot-brand p{margin-top:14px;font-size:0.92rem;color:#B7ABCF;max-width:32ch;}
+  footer h4{font-family:'Baloo 2',sans-serif;color:#fff;font-size:1rem;margin-bottom:14px;}
+  footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:0.92rem;}
+  footer a:hover{color:#fff;}
+  .foot-bottom{
+    margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.12);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.82rem;color:#9C8FBB;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:980px){
+    .hero-inner{grid-template-columns:1fr;}
+    .scoop-cluster{height:280px;order:-1;}
+    .cat-grid{grid-template-columns:repeat(3,1fr);}
+    .grow-grid{grid-template-columns:1fr;}
+    .social-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:700px){
+    .navlinks{display:none;}
+    .menu-toggle{display:block;}
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .promo{flex-direction:column;align-items:flex-start;}
+    .foot-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">
+      <img src="https://www.laneveria.com.sv/wp-content/uploads/2024/09/LOGO-HEADER-LA-NEVERIA.png" alt="La Nevería">
+    </a>
+    <ul class="navlinks">
+      <li><a href="#sabores">Productos</a></li>
+      <li><a href="#novedades">Novedades</a></li>
+      <li><a href="#crecer">Nosotros</a></li>
+      <li><a href="#social">Síguenos</a></li>
+      <li><a href="http://www.laneveria.com.sv/contacto/">Contacto</a></li>
+    </ul>
+    <a class="cta-btn" href="http://www.laneveria.com.sv/carrito/">Pedir ahora</a>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>El antojo tiene forma de <span>bola de helado</span>.</h1>
+      <p>Helados, paletas, pasteles y cafés hechos para el clima salvadoreño: fríos, cremosos y listos cuando el calor no da tregua.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#sabores">Ver sabores</a>
+        <a class="btn-ghost" href="http://www.laneveria.com.sv/nosotros/franquicias/">Encuentra tu tienda</a>
+      </div>
+    </div>
+    <div class="scoop-cluster">
+      <div class="scoop s1"><img src="https://www.laneveria.com.sv/wp-content/uploads/2024/09/frutos-1650x550.jpg" alt="Helado de frutos"></div>
+      <div class="scoop s2"><img src="https://www.laneveria.com.sv/wp-content/uploads/2024/09/banana-fresa-1650x550.jpg" alt="Helado banana fresa"></div>
+      <div class="scoop s3"><img src="https://www.laneveria.com.sv/wp-content/uploads/2024/09/vainilla-1650x550.jpg" alt="Helado de vainilla"></div>
+      <div class="scoop s4"><img src="https://www.laneveria.com.sv/wp-content/uploads/2024/09/unicornio-1650x550.jpg" alt="Helado sabor unicornio"></div>
+    </div>
+  </div>
+  <div class="scallop" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path fill="#FFA630" d="M0,0 Q50,40 100,0 Q150,40 200,0 Q250,40 300,0 Q350,40 400,0 Q450,40 500,0 Q550,40 600,0 Q650,40 700,0 Q750,40 800,0 Q850,40 900,0 Q950,40 1000,0 Q1050,40 1100,0 Q1150,40 1200,0 L1200,60 L0,60 Z"/>
+    </svg>
+  </div>
+</section>
+
+<div class="marquee-band" role="marquee" aria-label="Categorías de productos">
+  <div class="marquee-track">
+    <span>Sabores</span><span>Especialidades</span><span>Pasteles Helados</span><span>Pasteles de Pan</span><span>Paletas</span><span>Para Llevar</span><span>Cafés</span><span>Helados Yogurt</span><span>Crepas</span><span>Postres</span>
+    <span>Sabores</span><span>Especialidades</span><span>Pasteles Helados</span><span>Pasteles de Pan</span><span>Paletas</span><span>Para Llevar</span><span>Cafés</span><span>Helados Yogurt</span><span>Crepas</span><span>Postres</span>
+  </div>
+</div>
+
+<section class="section" id="sabores">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Un antojo para cada momento</h2>
+      <p>Desde una bola clásica hasta un pastel completo: elige tu categoría y encuentra el sabor que se ajusta a tu día.</p>
+    </div>
+    <div class="cat-grid">
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/sabores/">
+        <div class="cat-icon" style="background:var(--berry-light)">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="18" fill="#E8386F"/><path d="M18 30 L32 58 L46 30 Z" fill="#F4C489"/></svg>
+        </div>
+        <h3>Sabores</h3><span>Cucurucho y vasito</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/especiales/">
+        <div class="cat-icon" style="background:#FFE9D2">
+          <svg viewBox="0 0 64 64"><circle cx="24" cy="26" r="14" fill="#FFA630"/><circle cx="40" cy="22" r="12" fill="#3FBF9F"/></svg>
+        </div>
+        <h3>Especialidades</h3><span>Creaciones únicas</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/pasteles/helados/">
+        <div class="cat-icon" style="background:#E4F7F1">
+          <svg viewBox="0 0 64 64"><rect x="12" y="30" width="40" height="16" rx="3" fill="#3FBF9F"/><rect x="12" y="22" width="40" height="10" fill="#fff"/></svg>
+        </div>
+        <h3>Pasteles helados</h3><span>Para celebrar</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/pasteles/de-pan/">
+        <div class="cat-icon" style="background:#FFF0DE">
+          <svg viewBox="0 0 64 64"><path d="M14 44 Q32 14 50 44 Z" fill="#E88A0E"/><rect x="12" y="44" width="40" height="6" rx="3" fill="#7A4A21"/></svg>
+        </div>
+        <h3>Pasteles de pan</h3><span>Repostería casera</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/empacados/">
+        <div class="cat-icon" style="background:var(--berry-light)">
+          <svg viewBox="0 0 64 64"><rect x="26" y="8" width="12" height="34" rx="6" fill="#E8386F"/><rect x="20" y="42" width="24" height="10" rx="3" fill="#7A4A21"/></svg>
+        </div>
+        <h3>Paletas y otros</h3><span>Empacados</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/para-llevar/">
+        <div class="cat-icon" style="background:#E4F7F1">
+          <svg viewBox="0 0 64 64"><rect x="14" y="24" width="36" height="26" rx="4" fill="#2C9C81"/><path d="M20 24 L26 12 H38 L44 24" fill="none" stroke="#2C9C81" stroke-width="4"/></svg>
+        </div>
+        <h3>Para llevar</h3><span>Litros y medios litros</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/cafes/">
+        <div class="cat-icon" style="background:#FFF0DE">
+          <svg viewBox="0 0 64 64"><path d="M14 24 H42 V40 a14 14 0 0 1 -28 0 Z" fill="#7A4A21"/><path d="M42 26 h6 a6 6 0 0 1 0 12 h-6" fill="none" stroke="#7A4A21" stroke-width="4"/></svg>
+        </div>
+        <h3>Cafés</h3><span>Fríos y calientes</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/helados-yogurt/">
+        <div class="cat-icon" style="background:var(--berry-light)">
+          <svg viewBox="0 0 64 64"><path d="M22 12 h20 l-4 20 a6 6 0 0 1 -12 0 Z" fill="#fff" stroke="#E8386F" stroke-width="3"/><circle cx="32" cy="42" r="4" fill="#FFA630"/></svg>
+        </div>
+        <h3>Helados yogurt</h3><span>Con tus toppings</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/crepas/">
+        <div class="cat-icon" style="background:#FFF0DE">
+          <svg viewBox="0 0 64 64"><path d="M12 20 Q32 44 52 20 Q32 30 12 20 Z" fill="#E88A0E"/></svg>
+        </div>
+        <h3>Crepas</h3><span>Dulces y saladas</span>
+      </a></div>
+
+      <div class="cat-tile"><a href="http://www.laneveria.com.sv/productos/postres/postres/">
+        <div class="cat-icon" style="background:#E4F7F1">
+          <svg viewBox="0 0 64 64"><rect x="18" y="26" width="28" height="20" rx="4" fill="#3FBF9F"/><circle cx="32" cy="20" r="6" fill="#E8386F"/></svg>
+        </div>
+        <h3>Postres</h3><span>Porciones individuales</span>
+      </a></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="novedades">
+  <div class="wrap">
+    <div class="promo">
+      <div>
+        <h2>Hay sabor nuevo en la nevera</h2>
+        <p>Revisa las promociones y lanzamientos de temporada antes de que se agoten.</p>
+      </div>
+      <a class="btn-primary" href="http://www.laneveria.com.sv/promociones/">Ver novedades</a>
+    </div>
+  </div>
+</section>
+
+<section class="section grow-section" id="crecer">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Crece con nosotros</h2>
+      <p>Tres formas de sumarte a La Nevería, dentro o fuera del mostrador.</p>
+    </div>
+    <div class="grow-grid">
+
+      <div class="grow-card">
+        <div class="photo"><img src="https://www.laneveria.com.sv/wp-content/uploads/2024/09/tienda-2024.jpg" alt="Tienda franquicia La Nevería"></div>
+        <div class="body">
+          <h3>Adquiere una franquicia</h3>
+          <p>Emprende con tu propia tienda La Nevería y súmate a una marca ya conocida en El Salvador y Guatemala.</p>
+          <a class="link" href="http://www.laneveria.com.sv/nosotros/franquicias/">Conocer más</a>
+        </div>
+      </div>
+
+      <div class="grow-card">
+        <div class="photo"><img src="https://www.laneveria.com.sv/wp-content/uploads/2024/09/congelador-1.jpg" alt="Congelador La Nevería"></div>
+        <div class="body">
+          <h3>Congelador para tu negocio</h3>
+          <p>Vende nuestros productos dentro de tu local y genera un ingreso extra sin complicaciones.</p>
+          <a class="link" href="http://www.laneveria.com.sv/nosotros/congeladores/">Conocer más</a>
+        </div>
+      </div>
+
+      <div class="grow-card">
+        <div class="photo"><img src="https://www.laneveria.com.sv/wp-content/uploads/2016/08/Colaboradora-1.png" alt="Equipo La Nevería"></div>
+        <div class="body">
+          <h3>Trabaja con nosotros</h3>
+          <p>Sé parte del equipo: envíanos tu información en línea y conoce las vacantes disponibles.</p>
+          <a class="link" href="http://www.laneveria.com.sv/contacto/bolsa-de-trabajo/">Conocer más</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section social-section" id="social">
+  <div class="wrap">
+    <div class="section-head on-dark">
+      <h2>Síguenos en redes</h2>
+      <p>Lanzamientos, promociones y el sabor del día a día de La Nevería.</p>
+    </div>
+    <div class="social-grid">
+
+      <a class="social-card" href="https://www.facebook.com/laneveria">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#FFA630"/><path d="M13.5 21v-7h2.3l.35-2.7h-2.65V9.6c0-.78.22-1.31 1.34-1.31h1.43V5.87A19 19 0 0 0 13.9 5.7c-2.13 0-3.6 1.3-3.6 3.68v2.02H8v2.7h2.3v7Z" fill="#2E1F4E"/></svg>
+        <h3>Facebook</h3>
+        <p>@laneveria — fotos, promos y tiendas cerca de ti.</p>
+        <span class="go">Visitar página</span>
+      </a>
+
+      <a class="social-card" href="https://twitter.com/LaNeveria_ofi">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#3FBF9F"/><path d="M7 7l10 10M17 7 7 17" stroke="#2E1F4E" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>X / Twitter</h3>
+        <p>@LaNeveria_ofi — novedades en tiempo real.</p>
+        <span class="go">Visitar perfil</span>
+      </a>
+
+      <a class="social-card" href="https://www.youtube.com/">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#E8386F"/><path d="M10 9l5 3-5 3Z" fill="#2E1F4E"/></svg>
+        <h3>YouTube</h3>
+        <p>Videos de producto, tiendas y detrás de cámaras.</p>
+        <span class="go">Ver canal</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top" style="color:#fff;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.3rem;">La Nevería</a>
+        <p>Empresa productora y comercializadora de helados, paletas y pasteles en El Salvador y Guatemala.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="http://www.laneveria.com.sv/productos/sabores/">Sabores</a></li>
+          <li><a href="http://www.laneveria.com.sv/productos/especiales/">Especialidades</a></li>
+          <li><a href="http://www.laneveria.com.sv/productos/pasteles/">Pasteles</a></li>
+          <li><a href="http://www.laneveria.com.sv/productos/empacados/">Paletas y otros</a></li>
+          <li><a href="http://www.laneveria.com.sv/productos/cafes/">Cafés</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nosotros</h4>
+        <ul>
+          <li><a href="http://www.laneveria.com.sv/nosotros/sobre-la-neveria/">Sobre La Nevería</a></li>
+          <li><a href="http://www.laneveria.com.sv/nosotros/franquicias/">Franquicias</a></li>
+          <li><a href="http://www.laneveria.com.sv/nosotros/congeladores/">Congeladores</a></li>
+          <li><a href="http://www.laneveria.com.sv/promociones/">Novedades</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="http://www.laneveria.com.sv/contacto/">Contáctanos</a></li>
+          <li><a href="http://www.laneveria.com.sv/contacto/bolsa-de-trabajo/">Trabaja con nosotros</a></li>
+          <li><a href="https://www.facebook.com/laneveria">Facebook</a></li>
+          <li><a href="https://twitter.com/LaNeveria_ofi">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 La Nevería. Todos los derechos reservados.</span>
+      <span>Propuesta de rediseño — contenido de referencia</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

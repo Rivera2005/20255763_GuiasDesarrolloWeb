@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: #d4af37;
+}
+
+h1 {
+    color: #d4af37;
+    text-transform: uppercase;
+}
+
+#contenedor {
+    background-image: url('../img/fondo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#cabecera {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+#titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#nombrePagina {
+    font-size: 60px;
+}
+
+#titulo>p {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.sombra {
+    display: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(190, 190, 190, 0) 100%, rgba(255, 255, 255, 0) 100%);
+}
+
+#historia {
+    height: 40vw;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#historia>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+#historia>div>p {
+    color: #d4af37;
+    font-size: 20px;
+    padding: 20px 300px;
+}
+
+#dragones {
+    height: 87vw;
+    width: 100vw;
+}
+
+#dragones>h2 {
+    color: #d4af37;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    word-spacing: 7px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.contenedor-grid {
+    padding: 10px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.item {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.carta {
+    border-radius: 15px;
+    position: relative;
+    height: 500px;
+}
+
+.carta:hover{
+    scale: 1.01;
+
+}
+
+.carta h3 {
+    color: #d4af37;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.carta h5 {
+    color: #ffb4a8;
+    font-size: 18px;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.carta p {
+    color: #ffdad4;
+    margin: 0px;
+}
+
+.info-carta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 7%;
+    left: 4%;
+    border-radius: 10px;
+}
+
+.columna-ancha {
+    grid-column: span 2;
+    height: 500px;
+    /* Ocupa el espacio de dos columnas */
+    background-image: url(../img/vhagar.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+}
+
+#caraxes {
+    background-image: url(../img/caraxes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#syrax {
+    background-image: url(../img/syrax.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+#sunfyre {
+    background-image: url(../img/sunfyre.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+#meleys {
+    background-image: url(../img/meleys.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+footer {
+    background-color: #000000;
+    margin: 0px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2 {
+    color: #d4af37;
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
