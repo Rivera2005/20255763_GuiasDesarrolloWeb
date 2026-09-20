@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Descubre los sabores de helados, paletas, pasteles y especialidades de La Nevería."
+  >
+  <title>Sabores | La Nevería</title>
+  <link rel="stylesheet" href="css/sabores.css">
+</head>
+
+<body data-page="sabores">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+
+      <a class="brand" href="index.html" aria-label="La Nevería, inicio">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M8 13h16L16 29 8 13Z"></path>
+            <path d="M7 13c0-5 4-9 9-9s9 4 9 9H7Z"></path>
+            <circle cx="12" cy="9" r="1.2"></circle>
+            <circle cx="17" cy="7" r="1.2"></circle>
+            <circle cx="21" cy="10" r="1.2"></circle>
+          </svg>
+        </span>
+        <span>La Nevería</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+
+        <a href="sabores.html#novedades" class="nav-link-active" aria-current="page">
+          Novedades
+        </a>
+
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="productos-menu"
+          >
+            Productos
+            <span aria-hidden="true">+</span>
+          </button>
+
+          <div class="nav-dropdown-menu" id="productos-menu">
+            <a href="sabores.html#sabores">Todos los sabores</a>
+            <a href="sabores.html#helados">Helados</a>
+            <a href="sabores.html#paletas">Paletas</a>
+            <a href="sabores.html#pasteles">Pasteles</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nosotros-menu"
+          >
+            Nosotros
+            <span aria-hidden="true">+</span>
+          </button>
+
+          <div class="nav-dropdown-menu" id="nosotros-menu">
+            <a href="index.html#negocio">Crece con nosotros</a>
+            <a href="contacto.html#nosotros">Conócenos</a>
+          </div>
+        </div>
+
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ===== ENCABEZADO ===== -->
+    <section class="page-intro" id="novedades">
+      <div class="wrap page-intro-inner">
+        <p class="eyebrow reveal">SABORES LA NEVERÍA</p>
+
+        <h1 class="display-title reveal">
+          Hay un sabor<br>
+          para cada antojo.
+        </h1>
+
+        <p class="page-intro-copy reveal">
+          Cremosos, frutales, divertidos o clásicos: descubre tus favoritos
+          y encuentra algo nuevo para disfrutar.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ===== FILTROS ===== -->
+    <section class="flavor-catalog" id="sabores">
+      <div class="wrap">
+
+        <div class="catalog-toolbar reveal">
+          <p class="catalog-label">Explora por categoría</p>
+
+          <div
+            class="filter-list"
+            role="group"
+            aria-label="Filtrar productos por categoría"
+          >
+            <button
+              class="filter-button is-active"
+              type="button"
+              data-filter="todos"
+              aria-pressed="true"
+            >
+              Todos
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="helados"
+              aria-pressed="false"
+            >
+              Helados
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="paletas"
+              aria-pressed="false"
+            >
+              Paletas
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="pasteles"
+              aria-pressed="false"
+            >
+              Pasteles
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="especialidades"
+              aria-pressed="false"
+            >
+              Especialidades
+            </button>
+          </div>
+        </div>
+
+
+        <!-- ===== PRODUCTOS ===== -->
+        <div class="flavor-grid" aria-live="polite">
+
+          <!-- 01 -->
+          <article
+            class="flavor-card reveal"
+            data-category="helados"
+            id="helados"
+            style="--card-index: 0;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-favorito">Favorito</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="chicle"
+                alt="Helado sabor chicle con trocitos"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Helado</p>
+              <h2>Chicle</h2>
+              <p>Vainilla con trocitos sabor chicle.</p>
+            </div>
+          </article>
+
+
+          <!-- 02 -->
+          <article
+            class="flavor-card reveal"
+            data-category="helados"
+            style="--card-index: 1;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-favorito">Favorito</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="fresa"
+                alt="Helado de fresa con salsa natural"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Helado</p>
+              <h2>Fresa</h2>
+              <p>Cremoso, con salsa de fresa natural.</p>
+            </div>
+          </article>
+
+
+          <!-- 03 -->
+          <article
+            class="flavor-card reveal"
+            data-category="helados"
+            style="--card-index: 2;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-kids">Para peques</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="unicornio"
+                alt="Helado sabor unicornio con frosting azul"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Helado</p>
+              <h2>Sabor Unicornio</h2>
+              <p>Algodón de azúcar con frosting azul.</p>
+            </div>
+          </article>
+
+
+          <!-- 04 -->
+          <article
+            class="flavor-card reveal"
+            data-category="helados"
+            style="--card-index: 3;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-nuevo">Nuevo</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="mangoTwist"
+                alt="Helado twist de vainilla, mango y sherbet"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Helado</p>
+              <h2>Mango Twist</h2>
+              <p>Twist de vainilla, mango y sherbet.</p>
+            </div>
+          </article>
+
+
+          <!-- 05 -->
+          <article
+            class="flavor-card reveal"
+            data-category="helados"
+            style="--card-index: 4;"
+          >
+            <div class="flavor-media">
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="vainilla"
+                alt="Helado cremoso de vainilla"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Helado</p>
+              <h2>Vainilla</h2>
+              <p>El clásico cremoso de siempre.</p>
+            </div>
+          </article>
+
+
+          <!-- 06 -->
+          <article
+            class="flavor-card reveal"
+            data-category="helados"
+            style="--card-index: 5;"
+          >
+            <div class="flavor-media">
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="frutosBosque"
+                alt="Helado de frutos del bosque con fresa y mora"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Helado</p>
+              <h2>Frutos del Bosque</h2>
+              <p>Sherbet de fresa y mora con vainilla.</p>
+            </div>
+          </article>
+
+
+          <!-- 07 -->
+          <article
+            class="flavor-card reveal"
+            data-category="especialidades"
+            style="--card-index: 6;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-favorito">Favorito</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="quesoFresa"
+                alt="Helado sabor pastel de queso con fresas"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Especialidad</p>
+              <h2>Queso Fresa</h2>
+              <p>Pastel de queso con fresas.</p>
+            </div>
+          </article>
+
+
+          <!-- 08 -->
+          <article
+            class="flavor-card reveal"
+            data-category="helados"
+            style="--card-index: 7;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-kids">Para peques</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="dinosaurio"
+                alt="Helado sabor dinosaurio de vainilla y cereza"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Helado</p>
+              <h2>Sabor Dinosaurio</h2>
+              <p>Vainilla y cereza, ideal para niños.</p>
+            </div>
+          </article>
+
+
+          <!-- 09 -->
+          <article
+            class="flavor-card reveal"
+            data-category="paletas"
+            id="paletas"
+            style="--card-index: 8;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-nuevo">Nuevo</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="paletaFrutal"
+                alt="Paletas heladas frutales de diferentes colores"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Paleta</p>
+              <h2>Paleta Frutal</h2>
+              <p>Una opción fresca y frutal para cualquier antojo.</p>
+            </div>
+          </article>
+
+
+          <!-- 10 -->
+          <article
+            class="flavor-card reveal"
+            data-category="paletas"
+            style="--card-index: 9;"
+          >
+            <div class="flavor-media">
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="paletaChocolate"
+                alt="Paleta helada de chocolate"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Paleta</p>
+              <h2>Paleta Chocolate</h2>
+              <p>Chocolate intenso en una presentación refrescante.</p>
+            </div>
+          </article>
+
+
+          <!-- 11 -->
+          <article
+            class="flavor-card reveal"
+            data-category="pasteles"
+            id="pasteles"
+            style="--card-index: 10;"
+          >
+            <div class="flavor-media">
+              <span class="product-tag tag-favorito">Favorito</span>
+
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="pastelHelado"
+                alt="Postre de pastel acompañado de helado"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Pastel</p>
+              <h2>Pastel Helado</h2>
+              <p>Una combinación especial para celebrar y compartir.</p>
+            </div>
+          </article>
+
+
+          <!-- 12 -->
+          <article
+            class="flavor-card reveal"
+            data-category="especialidades"
+            style="--card-index: 11;"
+          >
+            <div class="flavor-media">
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-image="conoEspecial"
+                alt="Cono de helado con varias capas y sabores"
+                loading="lazy"
+                width="800"
+                height="800"
+                onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+              >
+            </div>
+
+            <div class="flavor-content">
+              <p class="flavor-category">Especialidad</p>
+              <h2>Cono Especial</h2>
+              <p>Una combinación de sabores para disfrutar sin complicaciones.</p>
+            </div>
+          </article>
+
+        </div>
+
+
+        <!-- ===== ESTADO SIN RESULTADOS ===== -->
+        <div class="filter-empty" hidden>
+          <p>No encontramos productos en esta categoría.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ===== CTA ===== -->
+    <section class="flavor-cta">
+      <div class="wrap">
+        <div class="cta-panel reveal">
+
+          <div>
+            <p class="eyebrow">¿TIENES UN ANTOJO?</p>
+
+            <h2>
+              Hablemos de<br>
+              tu próximo favorito.
+            </h2>
+
+            <p>
+              Escríbenos y descubre más sobre nuestros productos,
+              tiendas y opciones para disfrutar La Nevería.
+            </p>
+          </div>
+
+          <a class="btn btn-light" href="contacto.html">
+            Ir a contacto
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+          <a class="brand brand-footer" href="index.html" aria-label="La Nevería, inicio">
+            <span class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M8 13h16L16 29 8 13Z"></path>
+                <path d="M7 13c0-5 4-9 9-9s9 4 9 9H7Z"></path>
+                <circle cx="12" cy="9" r="1.2"></circle>
+                <circle cx="17" cy="7" r="1.2"></circle>
+                <circle cx="21" cy="10" r="1.2"></circle>
+              </svg>
+            </span>
+            <span>La Nevería</span>
+          </a>
+
+          <p>
+            Empresa salvadoreña productora y comercializadora de helados,
+            paletas y pasteles, con tiendas en El Salvador y Guatemala.
+          </p>
+        </div>
+
+
+        <div class="footer-column">
+          <h2>Navegación</h2>
+
+          <a href="index.html">Inicio</a>
+          <a href="sabores.html">Sabores</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+
+
+        <div class="footer-column">
+          <h2>La Nevería</h2>
+
+          <a href="index.html#negocio">Franquicias</a>
+          <a href="index.html#negocio">Congeladores</a>
+          <a href="index.html#negocio">Trabaja con nosotros</a>
+        </div>
+
+
+        <div class="footer-column">
+          <h2>Contacto</h2>
+
+          <a href="tel:+50322500000">2250-0000</a>
+          <a href="mailto:info@laneveria.com.sv">info@laneveria.com.sv</a>
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+        <p>© 2026 La Nevería. Todos los derechos reservados.</p>
+
+        <div class="footer-social" aria-label="Redes sociales">
+          <a
+            href="#"
+            aria-label="Facebook"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+
+          <a
+            href="#"
+            aria-label="Twitter"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
+
+          <a
+            href="#"
+            aria-label="Instagram"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="sabores.js"></script>
+</body>
+</html>
