@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Contáctate con La Nevería para consultas, franquicias, congeladores, oportunidades de trabajo o sugerencias."
+  >
+
+  <title>Contacto | La Nevería</title>
+
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<body data-page="contacto">
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="La Nevería, inicio"
+      >
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M8 13h16L16 29 8 13Z"></path>
+            <path d="M7 13c0-5 4-9 9-9s9 4 9 9H7Z"></path>
+            <circle cx="12" cy="9" r="1.2"></circle>
+            <circle cx="17" cy="7" r="1.2"></circle>
+            <circle cx="21" cy="10" r="1.2"></circle>
+          </svg>
+        </span>
+
+        <span>La Nevería</span>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="main-navigation"
+        aria-label="Navegación principal"
+      >
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="sabores.html#novedades">
+          Novedades
+        </a>
+
+
+        <div class="nav-dropdown">
+
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="productos-menu"
+          >
+            Productos
+            <span aria-hidden="true">+</span>
+          </button>
+
+          <div
+            class="nav-dropdown-menu"
+            id="productos-menu"
+          >
+            <a href="sabores.html#sabores">
+              Todos los sabores
+            </a>
+
+            <a href="sabores.html#helados">
+              Helados
+            </a>
+
+            <a href="sabores.html#paletas">
+              Paletas
+            </a>
+
+            <a href="sabores.html#pasteles">
+              Pasteles
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="nav-dropdown">
+
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nosotros-menu"
+          >
+            Nosotros
+            <span aria-hidden="true">+</span>
+          </button>
+
+          <div
+            class="nav-dropdown-menu"
+            id="nosotros-menu"
+          >
+            <a href="index.html#negocio">
+              Crece con nosotros
+            </a>
+
+            <a href="contacto.html#nosotros">
+              Conócenos
+            </a>
+          </div>
+
+        </div>
+
+
+        <a
+          href="contacto.html"
+          class="nav-link-active"
+          aria-current="page"
+        >
+          Contacto
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+  <!-- =====================================================
+       CONTENIDO PRINCIPAL
+       ===================================================== -->
+
+  <main>
+
+
+    <!-- ===================================================
+         ENCABEZADO
+         =================================================== -->
+
+    <section class="page-intro contact-intro">
+      <div class="wrap page-intro-inner">
+
+        <p class="eyebrow reveal">
+          HABLEMOS
+        </p>
+
+        <h1 class="display-title reveal">
+          Estamos aquí<br>
+          para escucharte.
+        </h1>
+
+        <p class="page-intro-copy reveal">
+          Cuéntanos qué necesitas y nos pondremos en contacto contigo.
+          Ya sea una consulta, una idea o una oportunidad para crecer
+          juntos, queremos saber de ti.
+        </p>
+
+      </div>
+    </section>
+
+
+
+    <!-- ===================================================
+         CONTACTO + FORMULARIO
+         =================================================== -->
+
+    <section class="contact-section">
+      <div class="wrap contact-layout">
+
+
+        <!-- FORMULARIO -->
+
+        <div class="contact-form-wrapper reveal">
+
+          <div class="section-heading">
+            <p class="eyebrow">
+              ESCRÍBENOS
+            </p>
+
+            <h2>
+              Cuéntanos<br>
+              lo que necesitas.
+            </h2>
+          </div>
+
+
+          <form
+            class="contact-form"
+            id="contact-form"
+            novalidate
+          >
+
+            <!-- Nombre -->
+
+            <div class="form-field">
+
+              <label for="nombre">
+                Nombre
+                <span aria-hidden="true">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                autocomplete="name"
+                placeholder="Tu nombre"
+                required
+                aria-describedby="nombre-error"
+              >
+
+              <p
+                class="form-error"
+                id="nombre-error"
+                role="alert"
+                aria-live="polite"
+              ></p>
+
+            </div>
+
+
+            <!-- Correo -->
+
+            <div class="form-field">
+
+              <label for="correo">
+                Correo electrónico
+                <span aria-hidden="true">*</span>
+              </label>
+
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                autocomplete="email"
+                placeholder="tu@correo.com"
+                required
+                aria-describedby="correo-error"
+              >
+
+              <p
+                class="form-error"
+                id="correo-error"
+                role="alert"
+                aria-live="polite"
+              ></p>
+
+            </div>
+
+
+            <!-- Teléfono -->
+
+            <div class="form-field">
+
+              <label for="telefono">
+                Teléfono
+              </label>
+
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                autocomplete="tel"
+                placeholder="0000-0000"
+                aria-describedby="telefono-error"
+              >
+
+              <p
+                class="form-error"
+                id="telefono-error"
+                role="alert"
+                aria-live="polite"
+              ></p>
+
+            </div>
+
+
+            <!-- Motivo -->
+
+            <div class="form-field">
+
+              <label for="motivo">
+                Motivo
+                <span aria-hidden="true">*</span>
+              </label>
+
+              <select
+                id="motivo"
+                name="motivo"
+                required
+                aria-describedby="motivo-error"
+              >
+                <option value="">
+                  Selecciona una opción
+                </option>
+
+                <option value="consulta">
+                  Consulta
+                </option>
+
+                <option value="franquicia">
+                  Franquicia
+                </option>
+
+                <option value="congelador">
+                  Congelador para mi negocio
+                </option>
+
+                <option value="trabaja">
+                  Trabaja con nosotros
+                </option>
+
+                <option value="queja">
+                  Queja o sugerencia
+                </option>
+              </select>
+
+              <p
+                class="form-error"
+                id="motivo-error"
+                role="alert"
+                aria-live="polite"
+              ></p>
+
+            </div>
+
+
+            <!-- Mensaje -->
+
+            <div class="form-field">
+
+              <label for="mensaje">
+                Mensaje
+                <span aria-hidden="true">*</span>
+              </label>
+
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Escribe tu mensaje..."
+                required
+                aria-describedby="mensaje-error"
+              ></textarea>
+
+              <p
+                class="form-error"
+                id="mensaje-error"
+                role="alert"
+                aria-live="polite"
+              ></p>
+
+            </div>
+
+
+            <!-- Mensaje de éxito -->
+
+            <div
+              class="form-success"
+              id="form-success"
+              role="status"
+              aria-live="polite"
+              hidden
+            >
+              <strong>¡Mensaje enviado!</strong>
+              <span>
+                Gracias por escribirnos. Hemos recibido tu mensaje.
+              </span>
+            </div>
+
+
+            <button
+              class="btn btn-primary form-submit"
+              type="submit"
+            >
+              Enviar mensaje
+            </button>
+
+          </form>
+
+        </div>
+
+
+
+        <!-- IMAGEN + DATOS -->
+
+        <aside class="contact-aside reveal">
+
+          <div class="contact-image">
+
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+              data-image="contacto"
+              alt="Cono de helado servido en una mesa"
+              loading="lazy"
+              width="1000"
+              height="1200"
+              onerror="this.onerror=null; this.src=window.IMAGE_FALLBACK;"
+            >
+
+          </div>
+
+
+          <div class="contact-details">
+
+            <p class="eyebrow">
+              DATOS DE CONTACTO
+            </p>
+
+            <div class="contact-detail-item">
+
+              <span>
+                Teléfono
+              </span>
+
+              <a href="tel:+50322500000">
+                2250-0000
+              </a>
+
+            </div>
+
+
+            <div class="contact-detail-item">
+
+              <span>
+                Correo
+              </span>
+
+              <a href="mailto:info@laneveria.com.sv">
+                info@laneveria.com.sv
+              </a>
+
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+
+    <!-- ===================================================
+         TIENDAS
+         =================================================== -->
+
+    <section
+      class="stores-section"
+      id="nosotros"
+    >
+
+      <div class="wrap">
+
+        <div class="stores-heading reveal">
+
+          <p class="eyebrow">
+            ENCUÉNTRANOS
+          </p>
+
+          <h2>
+            Encuentra tu tienda.
+          </h2>
+
+          <p>
+            Visítanos y disfruta tus sabores favoritos
+            en persona.
+          </p>
+
+        </div>
+
+
+        <div class="stores-grid">
+
+
+          <!-- EL SALVADOR -->
+
+          <article class="store-block reveal">
+
+            <div class="store-number">
+              01
+            </div>
+
+            <div>
+
+              <p class="store-country">
+                El Salvador
+              </p>
+
+              <h3>
+                Tiendas La Nevería
+              </h3>
+
+              <p>
+                Consulta la tienda más cercana y nuestros horarios
+                de atención.
+              </p>
+
+              <div class="store-info">
+
+                <span>
+                  Ubicación de referencia
+                </span>
+
+                <strong>
+                  Zona comercial de ejemplo
+                </strong>
+
+              </div>
+
+              <div class="store-info">
+
+                <span>
+                  Horario de ejemplo
+                </span>
+
+                <strong>
+                  Lunes a domingo · 10:00 AM – 8:00 PM
+                </strong>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- GUATEMALA -->
+
+          <article class="store-block reveal">
+
+            <div class="store-number">
+              02
+            </div>
+
+            <div>
+
+              <p class="store-country">
+                Guatemala
+              </p>
+
+              <h3>
+                Tiendas La Nevería
+              </h3>
+
+              <p>
+                Encuentra nuestros productos en puntos
+                seleccionados del país.
+              </p>
+
+              <div class="store-info">
+
+                <span>
+                  Ubicación de referencia
+                </span>
+
+                <strong>
+                  Zona comercial de ejemplo
+                </strong>
+
+              </div>
+
+              <div class="store-info">
+
+                <span>
+                  Horario de ejemplo
+                </span>
+
+                <strong>
+                  Lunes a domingo · 10:00 AM – 8:00 PM
+                </strong>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <p class="store-disclaimer reveal">
+          * Los datos de ubicación y horarios mostrados en esta sección
+          son únicamente ejemplos genéricos para la demostración del sitio.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CTA
+         =================================================== -->
+
+    <section class="contact-cta">
+
+      <div class="wrap">
+
+        <div class="cta-panel reveal">
+
+          <div>
+
+            <p class="eyebrow">
+              LA NEVERÍA
+            </p>
+
+            <h2>
+              Tu próximo<br>
+              antojo empieza aquí.
+            </h2>
+
+            <p>
+              También puedes escribirnos directamente a
+              nuestro correo o llamarnos.
+            </p>
+
+          </div>
+
+          <a
+            class="btn btn-light"
+            href="mailto:info@laneveria.com.sv"
+          >
+            Escríbenos
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="wrap">
+
+      <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+          <a
+            class="brand brand-footer"
+            href="index.html"
+            aria-label="La Nevería, inicio"
+          >
+
+            <span
+              class="brand-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32">
+                <path d="M8 13h16L16 29 8 13Z"></path>
+                <path d="M7 13c0-5 4-9 9-9s9 4 9 9H7Z"></path>
+                <circle cx="12" cy="9" r="1.2"></circle>
+                <circle cx="17" cy="7" r="1.2"></circle>
+                <circle cx="21" cy="10" r="1.2"></circle>
+              </svg>
+            </span>
+
+            <span>
+              La Nevería
+            </span>
+
+          </a>
+
+          <p>
+            Empresa salvadoreña productora y comercializadora de
+            helados, paletas y pasteles, con tiendas en El Salvador
+            y Guatemala.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h2>
+            Navegación
+          </h2>
+
+          <a href="index.html">
+            Inicio
+          </a>
+
+          <a href="sabores.html">
+            Sabores
+          </a>
+
+          <a href="contacto.html">
+            Contacto
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h2>
+            La Nevería
+          </h2>
+
+          <a href="index.html#negocio">
+            Franquicias
+          </a>
+
+          <a href="index.html#negocio">
+            Congeladores
+          </a>
+
+          <a href="index.html#negocio">
+            Trabaja con nosotros
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h2>
+            Contacto
+          </h2>
+
+          <a href="tel:+50322500000">
+            2250-0000
+          </a>
+
+          <a href="mailto:info@laneveria.com.sv">
+            info@laneveria.com.sv
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 La Nevería. Todos los derechos reservados.
+        </p>
+
+        <div
+          class="footer-social"
+          aria-label="Redes sociales"
+        >
+
+          <a
+            href="#"
+            aria-label="Facebook"
+          >
+            Facebook
+          </a>
+
+          <a
+            href="#"
+            aria-label="Twitter"
+          >
+            Twitter
+          </a>
+
+          <a
+            href="#"
+            aria-label="Instagram"
+          >
+            Instagram
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="contacto.js"></script>
+
+</body>
+</html>

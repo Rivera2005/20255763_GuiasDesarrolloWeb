@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Nevería | Helados, paletas y pasteles hechos con cariño</title>
+  <meta
+    name="description"
+    content="Helados artesanales, paletas y pasteles de La Nevería. Encuentra tu tienda en El Salvador y Guatemala, o pregunta por franquicias."
+  >
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-page="inicio">
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html" aria-label="La Nevería, ir al inicio">
+        <svg
+          class="brand-icon"
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M7 12h18L16 29 7 12Z"></path>
+          <path d="M8 12c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          <path d="M11 17h10"></path>
+          <path d="M13 21h6"></path>
+        </svg>
+        <span>La Nevería</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" href="index.html" aria-current="page">
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="sabores.html#novedades">
+              Novedades
+            </a>
+          </li>
+          <li class="nav-dropdown">
+            <button
+              class="nav-link nav-dropdown-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="productos-menu"
+            >
+              Productos
+              <span class="nav-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="dropdown" id="productos-menu">
+              <li><a href="sabores.html#sabores">Sabores</a></li>
+              <li><a href="sabores.html#especialidades">Especialidades</a></li>
+              <li><a href="sabores.html#pasteles">Pasteles</a></li>
+              <li><a href="sabores.html#paletas">Paletas y empacados</a></li>
+              <li><a href="sabores.html#cafes">Cafés y crepas</a></li>
+              <li><a href="sabores.html#postres">Postres</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <button
+              class="nav-link nav-dropdown-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="nosotros-menu"
+            >
+              Nosotros
+              <span class="nav-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="dropdown" id="nosotros-menu">
+              <li><a href="index.html#negocio">Sobre La Nevería</a></li>
+              <li><a href="index.html#negocio">Franquicias</a></li>
+              <li><a href="index.html#negocio">Congeladores</a></li>
+              <li><a href="index.html#negocio">Trabaja con nosotros</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-link" href="contacto.html">
+              Contacto
+            </a>
+          </li>
+        </ul>
+
+        <a class="btn btn-cream mobile-store-link" href="index.html#tiendas">
+          Encuentra tu tienda
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-outline header-store-link" href="#tiendas">
+          Encuentra tu tienda
+        </a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =======================================================
+         HERO SECTION (CSS Grid)
+    ======================================================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img
+          class="hero-image"
+          data-image="hero"
+          src=""
+          alt="Persona disfrutando un cono de helado de fresa"
+          width="1600"
+          height="1000"
+          loading="eager"
+          fetchpriority="high"
+          onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;"
+        >
+      </div>
+
+      <div class="hero-grid-container">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Hecho en El Salvador desde hace más de 30 años</span>
+          <h1 id="hero-title" class="display-title">
+            <span>UN MOMENTO</span>
+            <span>FELIZ</span>
+            <span class="accent-word">CABE EN</span>
+            <span>UN CONO</span>
+          </h1>
+        </div>
+
+        <div class="hero-side reveal">
+          <p class="hero-description">
+            Helados, paletas y pasteles artesanales para compartir en familia, todos los días del año.
+          </p>
+          <a class="inline-label" href="sabores.html">
+            <span>VER SABORES</span>
+            <span class="inline-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-outline btn-light-outline" href="#tiendas">
+            Encuentra tu tienda
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         PRODUCTOS / SABORES (CSS Grid Masivo)
+    ======================================================== -->
+    <section class="products section" id="productos" aria-labelledby="productos-title">
+      <div class="wrap">
+        <div class="section-intro reveal">
+          <span class="section-label">SABORES</span>
+          <h2 id="productos-title" class="section-title">Sabores que alegran el día</h2>
+          <p class="section-description">
+            Cremosos, frutales, divertidos o clásicos: hay un sabor de La Nevería para cada gusto.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="chicle" src="" alt="Helado sabor Chicle" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">FAVORITO</span>
+              <h3>Chicle</h3>
+              <p>Vainilla con trocitos sabor chicle</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="fresa" src="" alt="Helado de fresa" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">FAVORITO</span>
+              <h3>Fresa</h3>
+              <p>Cremoso, con salsa de fresa natural</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="unicornio" src="" alt="Sabor Unicornio" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">PARA PEQUES</span>
+              <h3>Sabor Unicornio</h3>
+              <p>Algodón de azúcar con frosting azul</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="mango" src="" alt="Mango Twist" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">NUEVO</span>
+              <h3>Mango Twist</h3>
+              <p>Twist de vainilla, mango y sherbet</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="vainilla" src="" alt="Vainilla" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag product-tag-hidden">CLÁSICO</span>
+              <h3>Vainilla</h3>
+              <p>El clásico cremoso de siempre</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="frutos" src="" alt="Frutos del Bosque" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag product-tag-hidden">CLÁSICO</span>
+              <h3>Frutos del Bosque</h3>
+              <p>Sherbet de fresa y mora con vainilla</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="quesoFresa" src="" alt="Queso Fresa" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag product-tag-hidden">CLÁSICO</span>
+              <h3>Queso Fresa</h3>
+              <p>Pastel de queso con fresas</p>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img data-image="dinosaurio" src="" alt="Sabor Dinosaurio" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">PARA PEQUES</span>
+              <h3>Sabor Dinosaurio</h3>
+              <p>Vainilla y cereza, ideal para niños</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-action reveal">
+          <a class="btn btn-outline" href="sabores.html">Ver todos los sabores</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         TIENDAS (CSS Grid Asimétrico)
+    ======================================================== -->
+    <section class="store-section section" id="tiendas" aria-labelledby="tiendas-title">
+      <div class="wrap">
+        <div class="store-panel reveal">
+          <div class="store-panel-copy">
+            <span class="section-label">ENCUÉNTRANOS</span>
+            <h2 id="tiendas-title" class="section-title">Antojo de La Nevería cerca de ti</h2>
+            <p>Tenemos tiendas en El Salvador y Guatemala. Encuentra la más cercana y ven a disfrutar hoy mismo.</p>
+            <a class="btn btn-cream" href="contacto.html#tiendas">Buscar mi tienda más cercana</a>
+          </div>
+          <div class="store-panel-image">
+            <img data-image="tienda" src="" alt="Tienda de helados" width="1200" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         NEGOCIO (CSS Grid Layout)
+    ======================================================== -->
+    <section class="business section" id="negocio" aria-labelledby="negocio-title">
+      <div class="wrap">
+        <div class="section-intro reveal">
+          <span class="section-label">PARA TU NEGOCIO</span>
+          <h2 id="negocio-title" class="section-title">Crece con La Nevería</h2>
+          <p class="section-description">Opciones para emprender, vender nuestros productos o formar parte del equipo.</p>
+        </div>
+
+        <div class="business-grid">
+          <article class="business-card reveal">
+            <div class="business-media">
+              <img data-image="franquicia" src="" alt="Franquicias" width="1200" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="business-body">
+              <span class="business-number">01</span>
+              <h3>Adquiere una franquicia</h3>
+              <p>Emprende tu propio negocio y abre una tienda de La Nevería en tu ciudad.</p>
+              <a class="inline-label" href="contacto.html#franquicias">
+                <span>CONOCER MÁS</span>
+                <span class="inline-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="business-card reveal">
+            <div class="business-media">
+              <img data-image="congelador" src="" alt="Congelador" width="1200" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="business-body">
+              <span class="business-number">02</span>
+              <h3>Congelador para tu negocio</h3>
+              <p>Comercializa nuestros productos dentro de tu local y genera ingresos extra.</p>
+              <a class="inline-label" href="contacto.html#congeladores">
+                <span>CONOCER MÁS</span>
+                <span class="inline-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="business-card reveal">
+            <div class="business-media">
+              <img data-image="equipo" src="" alt="Trabaja con nosotros" width="1200" height="800" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;">
+            </div>
+            <div class="business-body">
+              <span class="business-number">03</span>
+              <h3>Trabaja con nosotros</h3>
+              <p>Sé parte de nuestro equipo. Envíanos tu información en línea.</p>
+              <a class="inline-label" href="contacto.html#empleo">
+                <span>VER VACANTES</span>
+                <span class="inline-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         SOCIAL (CSS Grid Layout)
+    ======================================================== -->
+    <section class="social section" aria-labelledby="social-title">
+      <div class="wrap">
+        <div class="social-grid-layout">
+          <div class="social-copy reveal">
+            <span class="section-label">COMUNIDAD</span>
+            <h2 id="social-title" class="section-title">Síguenos y comparte tu momento La Nevería</h2>
+            <p>Etiquétanos en tus fotos con helado en mano; nos encanta ver tus antojos.</p>
+            <div class="social-links">
+              <a class="social-link" href="https://www.facebook.com/laneveria" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a class="social-link" href="https://twitter.com/LaNeveria_ofi" target="_blank" rel="noopener noreferrer">Twitter</a>
+              <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+          </div>
+
+          <div class="social-mosaic reveal">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicación"><img data-image="social1" src="" alt="Publicación 1" width="600" height="600" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicación"><img data-image="social2" src="" alt="Publicación 2" width="600" height="600" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicación"><img data-image="social3" src="" alt="Publicación 3" width="600" height="600" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicación"><img data-image="social4" src="" alt="Publicación 4" width="600" height="600" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicación"><img data-image="social5" src="" alt="Publicación 5" width="600" height="600" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicación"><img data-image="social6" src="" alt="Publicación 6" width="600" height="600" loading="lazy" onerror="this.onerror=null;this.src=window.IMAGE_FALLBACK;"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER (CSS Grid Layout)
+  ========================================================== -->
+  <footer class="site-footer" id="contacto">
+    <div class="wrap">
+      <div class="footer-grid-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html" aria-label="La Nevería, ir al inicio">
+            <svg class="brand-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path d="M7 12h18L16 29 7 12Z"></path>
+              <path d="M8 12c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+              <path d="M11 17h10"></path>
+              <path d="M13 21h6"></path>
+            </svg>
+            <span>La Nevería</span>
+          </a>
+          <p>Empresa salvadoreña productora y comercializadora de helados, paletas y pasteles, con tiendas en El Salvador y Guatemala.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sabores.html#novedades">Novedades</a></li>
+            <li><a href="sabores.html">Productos</a></li>
+            <li><a href="index.html#negocio">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Para tu negocio</h3>
+          <ul>
+            <li><a href="contacto.html#franquicias">Franquicias</a></li>
+            <li><a href="contacto.html#congeladores">Congeladores</a></li>
+            <li><a href="contacto.html#empleo">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="tel:+50322500000">2250-0000</a></li>
+            <li><a href="mailto:info@laneveria.com.sv">info@laneveria.com.sv</a></li>
+            <li><a href="contacto.html">Escríbenos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 La Nevería. Todos los derechos reservados.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/laneveria" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a href="https://twitter.com/LaNeveria_ofi" target="_blank" rel="noopener noreferrer" aria-label="Twitter">t</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
