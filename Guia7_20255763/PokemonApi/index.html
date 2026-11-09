@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador Pokémon</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container py-5">
+        <a href="../index.html" class="btn btn-primary" role="button">Volver</a>
+        <h1 class="text-center fw-bold mb-3">Explorador Pokémon</h1>
+        <p class="text-center mb-4">
+            Selecciona un Pokémon de la lista para consultar sus detalles.
+        </p>
+
+        <p id="idEstado" class="text-center" role="status" aria-live="polite">
+            Cargando Pokémon...
+        </p>
+
+        <div class="row g-4">
+            <section class="col-md-5" aria-labelledby="tituloLista">
+                <h2 id="tituloLista" class="h4">Pokémon disponibles</h2>
+                <ul id="idListaPokemon" class="list-group"></ul>
+            </section>
+
+            <section class="col-md-7" aria-labelledby="tituloDetalle">
+                <h2 id="tituloDetalle" class="h4">Detalles</h2>
+                <div id="idDetallePokemon" class="card">
+                    <div class="card-body">
+                        <p class="mb-0">
+                            Selecciona un Pokémon para ver su información.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/pokemon.js" defer></script>
+</body>
+
+</html>
